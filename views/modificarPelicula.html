@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Modifica la película{% endblock %}
+
+{% block content %}
+    <h1>Modifica la película</h1>
+    <p>En este apartado podrás modificar la pelicula según tus necesidades.</p>
+
+    {% for item in pelicula %}
+    <form method="post" action="/listadoPeliculas/pelicula/{{ item._id.valueOf() }}">
+        Nombre:<br>
+        <input type="text" name="nombre" value="{{ item.nombre }}"><br>
+        Director:<br>
+        <input type="text" name="director" value="{{ item.director }}"><br>
+        Año:<br>
+        <input type="text" name="anyo" value="{{ item.anyo }}"><br>
+        Precio:<br>
+        <input type="text" name="precio" value="{{ item.precio }}"><br><br>
+        <input type="submit" value="Modificar">
+    </form>
+    {% endfor %}
+    <button onclick="location.href = '/listadoPeliculas';">Volver</button>
+{% endblock %}

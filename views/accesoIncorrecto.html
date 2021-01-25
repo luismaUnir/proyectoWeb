@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Acceso incorrecto{% endblock %}
+
+{% block content %}
+    <h1>Hola {{ usuario }}</h1>
+
+    {% if error %}
+    <h2>{{ titulo }}</h2>
+    <p>{{ error }}</p>
+    {% else %}
+    <h2>{{ titulo }}</h2>
+    <form method="post" action="{{ urlFormulario }}">
+        Usuario:<br>
+        <input type="text" name="usuario" value="{{ usuario }}" required><br>
+        Contraseña:<br>
+        <input type="text" name="password" required><br><br>
+        <input type="submit" value="{{ tituloBoton }}">
+    </form>
+    {% endif %}
+
+    <button onclick="location.href = '/';">Volver</button>
+{% endblock %}

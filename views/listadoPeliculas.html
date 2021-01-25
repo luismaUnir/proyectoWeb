@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}Listado de películas{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a nuestro videoclub</h1>
+
+    <h3>Si desea agregar una película, rellene el siguiente formulario</h3>
+
+    <form method="post" action="listadoPeliculas/pelicula">
+        Nombre:<br>
+        <input type="text" name="nombre"><br>
+        Director:<br>
+        <input type="text" name="director"><br>
+        Año:<br>
+        <input type="text" name="anyo"><br>
+        Precio:<br>
+        <input type="text" name="precio"><br><br>
+        <input type="submit" value="Guardar película">
+    </form>
+
+    {% if listado %}
+    <h2>Este es nuestro listado de películas</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>NOMBRE</th>
+            <th>DIRECTOR</th>
+            <th>AÑO</th>
+            <th>PRECIO</th>
+            <th>ACCIONES</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pelicula in listado %}
+        <tr>
+            <td>{{ pelicula.nombre }}</td>
+            <td>{{ pelicula.director }}</td>
+            <td>{{ pelicula.anyo }}</td>
+            <td>{{ pelicula.precio }}</td>
+            <td>
+                <button onclick="borrarPelicula('{{pelicula._id.valueOf()}}')">Borrar</button>
+                <button onclick="location.href = '/listadoPeliculas/pelicula/{{pelicula._id.valueOf()}}';">Modificar</button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h3>Actualmente no hay películas almacenadas en la BBDD</h3>
+    {% endif %}
+
+    <button onclick="location.href = '/';">Salir</button>
+{% endblock %}

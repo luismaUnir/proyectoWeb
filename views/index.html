@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Página de bienvenida{% endblock %}
+
+{% block content %}
+    <h1>BIENVENIDO</h1>
+    <h2>Por favor, si no está registrado, regístrese</h2>
+    <form method="post" action="/registro">
+        Usuario:<br>
+        <input type="text" name="usuario" required><br>
+        Contraseña:<br>
+        <input type="text" name="password" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <h2>En caso contrario, acceda con su usuario</h2>
+    <form method="post" action="/acceso">
+        Usuario:<br>
+        <input type="text" name="usuario" required><br>
+        Contraseña:<br>
+        <input type="text" name="password" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
