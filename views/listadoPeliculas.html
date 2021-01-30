@@ -22,7 +22,9 @@
 
     {% if listado %}
     <h2>Este es nuestro listado de películas</h2>
-    <table class="table table-bordered">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <table class="table table-bordered table-responsive">
         <thead class="table-dark">
         <tr>
             <th>NOMBRE</th>
@@ -47,6 +49,8 @@
         {% endfor %}
         </tbody>
     </table>
+      </div>
+    </div>
     {% else %}
     <h3>Actualmente no hay películas almacenadas en la BBDD</h3>
     {% endif %}
