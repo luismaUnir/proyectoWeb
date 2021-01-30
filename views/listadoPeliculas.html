@@ -11,10 +11,20 @@
     <form method="post" action="listadoPeliculas/pelicula">
         Nombre:<br>
         <input type="text" name="nombre"><br>
-        Director:<br>
+        <div class="row">
+            <div class="col-xs-6">
+                Director:<br>
+                <input type="text" name="director"><br>
+            </div>
+            <div class="col-xs-6">
+                Año:<br>
+                <input type="text" name="anyo"><br>
+            </div>
+        </div>
+     <!--   Director:<br>
         <input type="text" name="director"><br>
         Año:<br>
-        <input type="text" name="anyo"><br>
+        <input type="text" name="anyo"><br>-->
         <div class="input-group">
             <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
             <span class="input-group-text">$</span>
