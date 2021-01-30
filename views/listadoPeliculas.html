@@ -15,8 +15,11 @@
         <input type="text" name="director"><br>
         Año:<br>
         <input type="text" name="anyo"><br>
-        Precio:<br>
-        <input type="text" name="precio"><br><br>
+        <div class="input-group">
+            <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
+            <span class="input-group-text">$</span>
+            <span class="input-group-text">0.00</span>
+        </div>
         <input type="submit" value="Guardar película">
     </form>
 
