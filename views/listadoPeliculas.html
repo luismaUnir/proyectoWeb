@@ -9,21 +9,22 @@
     <h3>Si desea agregar una película, rellene el siguiente formulario</h3>
 
     <form method="post" action="listadoPeliculas/pelicula">
-        Nombre:<br>
-        <input type="text" name="nombre"><br>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
+                Nombre:<br>
+                <input class="form-control" type="text" name="nombre"><br>
+            </div>
+            <div class="col-sm-2">
                 Director:<br>
                 <input class="form-control" type="text" name="director"><br>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 Año:<br>
                 <input class="form-control" type="text" name="anyo"><br>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
+                Precio:<br>
                 <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
             </div>
         </div>
      <!--   Director:<br>
