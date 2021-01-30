@@ -2,3 +2,11 @@ body {
    /* background-color: deepskyblue;*/
     background-color: #fff;
 }
+table th {
+    text-align: center;
+}
+
+.table {
+    margin: auto;
+    width: 70% !important;
+}
