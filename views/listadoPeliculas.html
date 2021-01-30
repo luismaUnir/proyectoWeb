@@ -14,11 +14,16 @@
         <div class="row">
             <div class="col-sm-3">
                 Director:<br>
-                <input type="text" name="director"><br>
+                <input class="form-control" type="text" name="director"><br>
             </div>
             <div class="col-sm-3">
                 Año:<br>
-                <input type="text" name="anyo"><br>
+                <input class="form-control" type="text" name="anyo"><br>
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
+                <span class="input-group-text">$</span>
+                <span class="input-group-text">0.00</span>
             </div>
         </div>
      <!--   Director:<br>
@@ -26,9 +31,7 @@
         Año:<br>
         <input type="text" name="anyo"><br>-->
         <div class="input-group">
-            <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
-            <span class="input-group-text">$</span>
-            <span class="input-group-text">0.00</span>
+
         </div>
         <input type="submit" value="Guardar película">
     </form>
