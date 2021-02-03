@@ -5,8 +5,8 @@
 {% block content %}
 <div class="sidenav">
     <div class="login-main-text">
-        <h2>Application<br> Login Page</h2>
-        <p>Login or register from here to access.</p>
+        <h2>Bienvenido al videoclub de Oliva, Luis y Abel<br> Página de Registro y Login</h2>
+        <p>Regístrese desde aquí o acceda.</p>
     </div>
 </div>
 
@@ -44,39 +44,5 @@
         </div>
     </div>
 </div>
-
-
-
-    <form method="post" action="/registro">
-        <div class="row">
-            <div class="col-sm-2">
-                Usuario:<br>
-                <input type="text" name="usuario" required><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2">
-                Contraseña:<br>
-                <input type="text" name="password" required><br><br>
-            </div>
-        </div>
-        <input type="submit" value="Enviar">
-    </form>
-    <h2>En caso contrario, acceda con su usuario</h2>
-    <form method="post" action="/acceso">
-        <div class="row">
-            <div class="col-sm-2">
-                Usuario:<br>
-                <input type="text" name="usuario" required><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2">
-                Contraseña:<br>
-                <input type="text" name="password" required><br><br>
-            </div>
-        </div>
-        <input type="submit" value="Enviar">
-
-    </form>
+ 
 {% endblock %}
