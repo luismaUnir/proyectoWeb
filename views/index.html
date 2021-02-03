@@ -3,6 +3,31 @@
 {% block title %}Página de bienvenida{% endblock %}
 
 {% block content %}
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Application<br> Login Page</h2>
+        <p>Login or register from here to access.</p>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form method="post" action="/registro">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" name="usuario" class="form-control" placeholder="User Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+</div>
+
+
     <h1>BIENVENIDO</h1>
     <h2>Por favor, si no está registrado, regístrese</h2>
     <form method="post" action="/registro">
@@ -36,9 +61,5 @@
         </div>
         <input type="submit" value="Enviar">
 
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
     </form>
 {% endblock %}
