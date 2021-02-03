@@ -40,7 +40,10 @@ body {
     .main{
         margin-left: 40%;
     }
-
+.container
+{
+    width:100% !important;
+}
     .sidenav{
         width: 40%;
         position: fixed;
