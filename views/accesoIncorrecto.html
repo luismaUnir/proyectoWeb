@@ -10,13 +10,35 @@
     <p>{{ error }}</p>
     {% else %}
     <h2>{{ titulo }}</h2>
-    <form method="post" action="{{ urlFormulario }}">
+<!--    <form method="post" action="{{ urlFormulario }}">
         Usuario:<br>
         <input type="text" name="usuario" value="{{ usuario }}" required><br>
         Contraseña:<br>
         <input type="text" name="password" required><br><br>
         <input type="submit" value="{{ tituloBoton }}">
-    </form>
+    </form>-->
+<div class="login-form">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <h6 class="card-subtitle mb-2 text-muted">En caso contrario, acceda con su usuario</h6>
+            <form method="post" action="{{ urlFormulario }}">
+                <div class="form-group">
+                    <label><b>Usuario</b></label>
+                    <input type="text" name="usuario" value="{{ usuario }}" class="form-control" placeholder="User Name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>Contraseña</b></label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" value="{{ tituloBoton }}">
+            </form>
+        </div>
+    </div>
+</div>
+
     {% endif %}
 
     <button onclick="location.href = '/';">Volver</button>
