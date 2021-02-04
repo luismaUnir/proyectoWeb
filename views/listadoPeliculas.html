@@ -8,7 +8,7 @@
 
     <h3>Si desea agregar una película, rellene el siguiente formulario</h3>
 
-    <form method="post" action="listadoPeliculas/pelicula">
+    <form method="post" action="listadoPeliculas/pelicula" id="formularioPelicula">
         <div class="row">
             <div class="col-sm-2">
                 Nombre:<br>
@@ -40,7 +40,7 @@
     {% if listado %}
     <h2>Este es nuestro listado de películas</h2>
 
-        <table class="table table-bordered table-responsive">
+        <table class="table table-bordered table-responsive" id="tablaContenido">
         <thead class="table-dark">
         <tr>
             <th>NOMBRE</th>
