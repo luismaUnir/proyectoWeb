@@ -7,17 +7,37 @@
     <p>En este apartado podrás modificar la pelicula según tus necesidades.</p>
 
     {% for item in pelicula %}
-    <form method="post" action="/listadoPeliculas/pelicula/{{ item._id.valueOf() }}">
-        Nombre:<br>
-        <input type="text" name="nombre" value="{{ item.nombre }}"><br>
-        Director:<br>
-        <input type="text" name="director" value="{{ item.director }}"><br>
-        Año:<br>
-        <input type="text" name="anyo" value="{{ item.anyo }}"><br>
-        Precio:<br>
-        <input type="text" name="precio" value="{{ item.precio }}"><br><br>
-        <input type="submit" value="Modificar">
-    </form>
+
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Registro</h5>
+        <h6 class="card-subtitle mb-2 text-muted">En este apartado podrás modificar la pelicula según tus necesidades.</h6>
+        <form method="post" action="/listadoPeliculas/pelicula/{{ item._id.valueOf() }}">
+            <div class="form-group">
+            Nombre:<br>
+            <input type="text" class="form-control" name="nombre" value="{{ item.nombre }}">
+            </div>
+            <br>
+            <div class="form-group">
+            Director:<br>
+            <input type="text" class="form-control" name="director" value="{{ item.director }}">
+            </div>
+            <br>
+            <div class="form-group">
+            Año:<br>
+            <input type="text" class="form-control" name="anyo" value="{{ item.anyo }}">
+            </div>
+            <br>
+            <div class="form-group">
+            Precio:<br>
+            <input type="text" class="form-control" name="precio" value="{{ item.precio }}">
+            </div>
+            <br><br>
+            <input type="submit" class="btn btn-primary" value="Modificar">
+        </form>
+    </div>
+</div>
     {% endfor %}
     <button onclick="location.href = '/listadoPeliculas';">Volver</button>
 {% endblock %}
