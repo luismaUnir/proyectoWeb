@@ -4,9 +4,9 @@
 {% block title %}Listado de películas{% endblock %}
 
 {% block content %}
-    <h1>Bienvenido a nuestro videoclub</h1>
+    <h1 id="tituloPeliculas">Bienvenido a nuestro videoclub {{ usuario }}</h1>
 
-    <h3>Si desea agregar una película, rellene el siguiente formulario</h3>
+    <h3 id="subtituloPeliculas">Si desea agregar una película, rellene el siguiente formulario</h3>
 
     <form method="post" action="listadoPeliculas/pelicula" id="formularioPelicula">
         <div class="row">
@@ -27,13 +27,7 @@
                 <input type="text" class="form-control" name="precio" aria-label="Dollar amount (with dot and two decimal places)">
             </div>
         </div>
-     <!--   Director:<br>
-        <input type="text" name="director"><br>
-        Año:<br>
-        <input type="text" name="anyo"><br>-->
-        <div class="input-group">
 
-        </div>
         <input class="btn btn-primary" type="submit" value="Guardar película">
     </form>
 
