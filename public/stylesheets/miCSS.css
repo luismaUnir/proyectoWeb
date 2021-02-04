@@ -40,6 +40,10 @@ body {
     .main{
         margin-left: 40%;
     }
+    #btnVolver
+    {
+        margin-left:10%;
+    }
 .container
 {
     width:100% !important;
