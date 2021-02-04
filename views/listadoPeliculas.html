@@ -34,7 +34,7 @@
         <div class="input-group">
 
         </div>
-        <input type="submit" value="Guardar película">
+        <input class="btn btn-primary" type="submit" value="Guardar película">
     </form>
 
     {% if listado %}
@@ -70,5 +70,5 @@
     <h3>Actualmente no hay películas almacenadas en la BBDD</h3>
     {% endif %}
 
-    <button onclick="location.href = '/';">Salir</button>
+    <button class="btn btn-secondary" onclick="location.href = '/';">Salir</button>
 {% endblock %}
